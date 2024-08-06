@@ -9,7 +9,10 @@ router.get('/', (req, res,next) => {
 const data= {
      "new way tro handle response": "done",
 }
-     return  responseHandler( res, 200, data,"fetched successfully");
+     if (true){
+        throw new Error("Error occured fooform")
+     }
+        responseHandler(res, 200, data  , "Data fetched successfully");
         
     } catch (error) {
         next(error)

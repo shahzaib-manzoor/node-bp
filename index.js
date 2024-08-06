@@ -7,7 +7,6 @@ import { configDotenv } from 'dotenv';
 import {db} from './config/db.js';
 import routes from './routes/index.js';
 import ErrorHandler from './middlewares/error-middleware.js';
-import responseMiddleware from './middlewares/response-middleware.js';
 import loggerMiddleware from './middlewares/logger-middleware.js';
 
 configDotenv();
@@ -17,7 +16,6 @@ app.use(bodyParser.json());
 
 app.use(loggerMiddleware);
 app.use('/api', routes);    
-app.use(responseMiddleware)
 
 app.use( ErrorHandler );
 

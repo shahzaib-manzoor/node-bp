@@ -4,7 +4,7 @@ npm-debug.log
 yarn-error.log
 
 # Dependency directories
-/.pnp
+/.pnp  
 .pnp.js
 
 # Optional npm cache directory
